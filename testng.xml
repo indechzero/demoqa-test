@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+
+<!--    <listeners>-->
+<!--        <listener class-name="TestComponents.Listeners"/>-->
+<!--    </listeners>-->
+    <test name = "Test Demo">
+        <classes>
+            <class name = "FinalActivity.tests.Runner.TestRunner"/>
+        </classes>
+    </test>
+<!--    <test verbose="2" preserve-order="true" name="Final Activity">-->
+
+<!--        <classes>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.ButtonStepDefinition"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.DynamicProperties"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.RadioButton"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.TextBox">-->
+<!--                <methods>-->
+<!--                    <include name="TxtBox"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.CheckBox"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.LinksStepDefinition"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.WebTables"/>-->
+
+<!--&lt;!&ndash;            Alerts and windows activity&ndash;&gt;-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.alertsAndWindows.alertStepDef">-->
+<!--                <methods>-->
+<!--                    <include name="alertPage"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.alertsAndWindows.windowsActivityStepDef"/>-->
+
+<!--            &lt;!&ndash;            Practice form Activity&ndash;&gt;-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.practiceForm.PracticeFormTest">-->
+<!--                <methods>-->
+<!--                    <include name="practiceForm"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+<!--        &lt;!&ndash;Interactions&ndash;&gt;-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.Interactions.SelectableCopy"/>-->
+
+<!--            &lt;!&ndash;Widgets&ndash;&gt;-->
+
+<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.autoSuggestStepDef"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.datePickerStepDef"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.progressBarStepDef"/>-->
+<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.selectMenuStepDef"/>-->
+
+
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
+
+
