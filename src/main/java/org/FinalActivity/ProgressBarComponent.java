@@ -9,6 +9,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +72,7 @@ public  void goToProgressBarPage() {
         System.out.println(progressBarButton.getText());
         textElementIsEqual(progressBarButton,"Stop");
 
-        Thread.sleep(Duration.ofSeconds(5));
+//        Thread.sleep(Duration.ofSeconds(5));
         progressBarButton.click();
 
         System.out.println(progressBar.getText());
@@ -80,7 +82,7 @@ public  void goToProgressBarPage() {
     public void continueProgressBar () throws InterruptedException {
 
         progressBarButton.click();
-        Thread.sleep(Duration.ofSeconds(5));
+//        Thread.sleep(Duration.ofSeconds(5));
 
 
     }

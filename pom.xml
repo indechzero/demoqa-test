@@ -83,6 +83,18 @@
             <artifactId>log4j-core</artifactId>
             <version>2.25.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.25.1</version>
+        </dependency>
+        <!-- SLF4J 2.x binding to route SLF4J calls to Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.25.1</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
         <dependency>
@@ -110,8 +122,12 @@
 
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <!-- Original Java target settings commented for compatibility changes -->
+        <!-- <maven.compiler.source>23</maven.compiler.source> -->
+        <!-- <maven.compiler.target>23</maven.compiler.target> -->
+        <!-- Using Java 17 for local execution compatibility -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

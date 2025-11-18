@@ -34,8 +34,16 @@ public class BaseTest {
 	public WebDriver initializeDriver() throws IOException
 
 	{
-		System.setProperty("webdriver.chrome.driver", "/Users/Josephcanlas/Documents/FinalActivity/chromedriver-mac-arm64/chromedriver");
-		driver = new ChromeDriver();
+		// Original explicit chromedriver path (kept commented for reference):
+		// System.setProperty("webdriver.chrome.driver", "/Users/Josephcanlas/Documents/FinalActivity/chromedriver-mac-arm64/chromedriver");
+		// Use WebDriverManager to download/setup the correct chromedriver binary automatically.
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		// Run headless by default when executing in CI or this environment.
+		options.addArguments("--headless=new");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
 		return driver;
 
 	}

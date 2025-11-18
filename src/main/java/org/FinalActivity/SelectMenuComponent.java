@@ -103,7 +103,7 @@ public void clickValueField () throws InterruptedException {
 
 public void clickOneValue(){
 
-    selectValueFirstGroupOptions.getFirst().click();
+//    selectValueFirstGroupOptions.getFirst().click();
     System.out.println("Selected Option:" + " " + selectValueField.getText());
     assert selectValueField.getText().equalsIgnoreCase("Group 1, option 1");
 

@@ -44,7 +44,7 @@ public class ProgressBarComponent extends BaseTest {
         System.out.println("Pause Progress Bar");
         System.out.println(progressPageObjects.progressBarButton.getText());
         assert progressPageObjects.progressBarButton.getText().equalsIgnoreCase("Stop");
-        Thread.sleep(Duration.ofSeconds(5));
+        Thread.sleep(5000);
         progressPageObjects.progressBarButton.click();
 
         System.out.println(progressPageObjects.progressBar.getText());
@@ -53,10 +53,10 @@ public class ProgressBarComponent extends BaseTest {
     }
     public void continueProgressBar () throws InterruptedException {
 
-        Thread.sleep(Duration.ofSeconds(8));
+        Thread.sleep(8000);
         System.out.println("Continue Progress Bar");
         progressPageObjects.progressBarButton.click();
-        Thread.sleep(Duration.ofSeconds(5));
+        Thread.sleep(5000);
 
 
     }

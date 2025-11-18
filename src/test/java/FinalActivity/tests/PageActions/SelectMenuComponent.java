@@ -47,7 +47,7 @@ public class SelectMenuComponent extends BaseTest {
 
     public void clickOneValue(){
 
-        selectPageObj.selectValueFirstGroupOptions.getFirst().click();
+//        selectPageObj.selectValueFirstGroupOptions.getFirst().click();
         System.out.println("Selected Option:" + " " + selectPageObj.selectValueField.getText());
         assert selectPageObj.selectValueField.getText().equalsIgnoreCase("Group 1, option 1");
 
