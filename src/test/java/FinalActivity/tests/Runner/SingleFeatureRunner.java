@@ -3,9 +3,9 @@ package FinalActivity.tests.Runner;
 public class SingleFeatureRunner {
     public static void main(String[] args) {
         io.cucumber.core.cli.Main.main(new String[]{
-                "--glue", "FinalActivity.tests.stepDefinitions",
+                "--glue", "FinalActivity.tests.StepDefinitions",
                 "--plugin", "pretty",
-                "src/test/java/Resources/alertsAndWindows.feature"
+                "src/test/java/Features/"
         });
     }
 }

@@ -3,7 +3,6 @@ package FinalActivity.tests.PageActions;
 import FinalActivity.tests.PageObjects.CheckBoxPageObjects;
 import TestComponents.BaseTest;
 import io.cucumber.java.en.Given;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

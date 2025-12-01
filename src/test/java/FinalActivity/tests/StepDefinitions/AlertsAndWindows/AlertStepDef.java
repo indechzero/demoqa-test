@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.alertsAndWindows;
+package FinalActivity.tests.StepDefinitions.AlertsAndWindows;
 
 import FinalActivity.tests.PageActions.AlertsComponent;
 import TestComponents.BaseTest;
@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class alertStepDef extends BaseTest {
+public class AlertStepDef extends BaseTest {
     WebDriver driver;
 
 AlertsComponent alertComponent = new AlertsComponent();

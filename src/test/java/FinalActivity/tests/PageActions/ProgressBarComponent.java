@@ -2,11 +2,6 @@ package FinalActivity.tests.PageActions;
 
 import FinalActivity.tests.PageObjects.progressBarPageObjects;
 import TestComponents.BaseTest;
-import io.cucumber.java.en.Given;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
-import java.time.Duration;
 
 public class ProgressBarComponent extends BaseTest {
 

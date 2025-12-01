@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.Elements;
+package FinalActivity.tests.StepDefinitions.Elements;
 
 import TestComponents.BaseTest;
 import FinalActivity.tests.PageActions.RadioButtonComponents;
@@ -6,7 +6,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

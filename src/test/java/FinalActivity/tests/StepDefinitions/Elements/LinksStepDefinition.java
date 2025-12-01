@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.Elements;
+package FinalActivity.tests.StepDefinitions.Elements;
 
 import FinalActivity.tests.PageActions.LinksComponent;
 import TestComponents.BaseTest;

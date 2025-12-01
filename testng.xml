@@ -13,42 +13,42 @@
 <!--    <test verbose="2" preserve-order="true" name="Final Activity">-->
 
 <!--        <classes>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.ButtonStepDefinition"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.DynamicProperties"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.RadioButton"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.TextBox">-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.ButtonStepDefinition"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.DynamicProperties"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.RadioButton"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.TextBox">-->
 <!--                <methods>-->
 <!--                    <include name="TxtBox"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.CheckBox"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.LinksStepDefinition"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Elements.WebTables"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.CheckBox"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.LinksStepDefinition"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Elements.WebTables"/>-->
 
 <!--&lt;!&ndash;            Alerts and windows activity&ndash;&gt;-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.alertsAndWindows.alertStepDef">-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.AlertsAndWindows.AlertStepDef">-->
 <!--                <methods>-->
 <!--                    <include name="alertPage"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.alertsAndWindows.windowsActivityStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.AlertsAndWindows.WindowsActivityStepDef"/>-->
 
 <!--            &lt;!&ndash;            Practice form Activity&ndash;&gt;-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.practiceForm.PracticeFormTest">-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.PracticeForm.PracticeFormTest">-->
 <!--                <methods>-->
-<!--                    <include name="practiceForm"/>-->
+<!--                    <include name="PracticeForm"/>-->
 <!--                </methods>-->
 <!--            </class>-->
 
 <!--        &lt;!&ndash;Interactions&ndash;&gt;-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.Interactions.SelectableCopy"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.Interactions.SelectableCopy"/>-->
 
 <!--            &lt;!&ndash;Widgets&ndash;&gt;-->
 
-<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.autoSuggestStepDef"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.datePickerStepDef"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.progressBarStepDef"/>-->
-<!--            <class name="FinalActivity.tests.stepDefinitions.WidgetsAct.selectMenuStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.AutoSuggestStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.DatePickerStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.ProgressBarStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.selectMenuStepDef"/>-->
 
 
 <!--        </classes>-->

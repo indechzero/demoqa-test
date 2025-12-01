@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.alertsAndWindows;
+package FinalActivity.tests.StepDefinitions.AlertsAndWindows;
 
 import FinalActivity.tests.PageActions.windowsActivityComponents;
 import TestComponents.BaseTest;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class windowsActivityStepDef extends BaseTest {
+public class WindowsActivityStepDef extends BaseTest {
 
     @Test
         @Given("that I am in the DEMO homepage for the Windows Activity")
@@ -20,6 +20,7 @@ public class windowsActivityStepDef extends BaseTest {
         @When("I navigated to the Windows activity page")
         public static void verifySectionTitle()
         {
+
             windowsActivityComponents.verifySectionTitle();
         }
 

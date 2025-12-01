@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.WidgetsAct;
+package FinalActivity.tests.StepDefinitions.WidgetsAct;
 
 import FinalActivity.tests.PageActions.ProgressBarComponent;
 import TestComponents.BaseTest;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 
-public class progressBarStepDef extends BaseTest {
+public class ProgressBarStepDef extends BaseTest {
 
         ProgressBarComponent progressbar = new ProgressBarComponent();
 

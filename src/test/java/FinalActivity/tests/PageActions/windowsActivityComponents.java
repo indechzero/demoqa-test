@@ -2,24 +2,27 @@ package FinalActivity.tests.PageActions;
 
 import FinalActivity.tests.PageObjects.WindowsActPageObjects;
 import TestComponents.BaseTest;
-import io.cucumber.java.en.When;
 import org.openqa.selenium.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Set;
-
-import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
 public class windowsActivityComponents extends BaseTest {
 
+    private static final Logger log = LoggerFactory.getLogger(windowsActivityComponents.class);
     private static final WindowsActPageObjects windowPageObjects = new WindowsActPageObjects(driver);
 
     public static void goToHomePage()
     {
+        log.info("Navigate to DemoQA site");
         driver.get("https://demoqa.com/");
+        log.error("Unable to assert URL");
         assert driver.getCurrentUrl().equalsIgnoreCase("https://demoqa.com/");
+        log.info("Assert URL");
         javaScrollDown(windowPageObjects.alertFrameWindowsbtn);
         windowPageObjects.alertFrameWindowsbtn.click();
         windowPageObjects.browserWindows.click();

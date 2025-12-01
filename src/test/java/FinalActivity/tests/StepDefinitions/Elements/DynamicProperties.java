@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.Elements;
+package FinalActivity.tests.StepDefinitions.Elements;
 
 import TestComponents.BaseTest;
 import FinalActivity.tests.PageActions.DynamicPropComponents;

@@ -4,10 +4,6 @@ import FinalActivity.tests.PageObjects.AlertsPageObjects;
 import TestComponents.BaseTest;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import io.cucumber.java.en.And;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class AlertsComponent extends BaseTest {
@@ -32,7 +28,7 @@ public class AlertsComponent extends BaseTest {
 
 
     public  void goToAlertsPage(){
-
+        log.info("Navigate to Alerts page");
         String ActualTitle = driver.getTitle();
         String PageTitle = "DEMOQA";
         assert ActualTitle.equalsIgnoreCase(PageTitle);

@@ -1,7 +1,7 @@
-package FinalActivity.tests.stepDefinitions.WidgetsAct;
+package FinalActivity.tests.StepDefinitions.WidgetsAct;
 
 import FinalActivity.tests.PageActions.AutoCompleteComponent;
-import FinalActivity.tests.stepDefinitions.Hooks;
+import FinalActivity.tests.StepDefinitions.Hooks;
 import TestComponents.BaseTest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class autoSuggestStepDef extends BaseTest {
+public class AutoSuggestStepDef extends BaseTest {
     WebDriver driver;
     Hooks hooks;
 

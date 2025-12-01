@@ -2,13 +2,8 @@ package FinalActivity.tests.PageActions;
 
 import FinalActivity.tests.PageObjects.LinksPageObjects;
 import TestComponents.BaseTest;
-import io.cucumber.java.en.Given;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class LinksComponent extends BaseTest {
 

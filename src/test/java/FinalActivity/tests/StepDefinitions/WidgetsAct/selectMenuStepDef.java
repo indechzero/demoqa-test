@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.WidgetsAct;
+package FinalActivity.tests.StepDefinitions.WidgetsAct;
 
 import TestComponents.BaseTest;
 import FinalActivity.tests.PageActions.SelectMenuComponent;

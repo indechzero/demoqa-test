@@ -1,4 +1,4 @@
-package FinalActivity.tests.stepDefinitions.WidgetsAct;
+package FinalActivity.tests.StepDefinitions.WidgetsAct;
 
 import FinalActivity.tests.PageActions.DatePickerComponent;
 import TestComponents.BaseTest;
@@ -6,12 +6,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class datePickerStepDef extends BaseTest {
+public class DatePickerStepDef extends BaseTest {
 
     DatePickerComponent datePick = new DatePickerComponent();
 

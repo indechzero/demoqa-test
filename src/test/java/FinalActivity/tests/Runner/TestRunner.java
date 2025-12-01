@@ -1,25 +1,23 @@
 package FinalActivity.tests.Runner;
-import TestComponents.BaseTest;
 import io.cucumber.testng.*;
 import io.cucumber.testng.CucumberOptions;
-import org.junit.runner.RunWith;
 import org.testng.annotations.Test;
 
 @Test
-// ORIGINAL: runs all features under the `Resources` folder
+// ORIGINAL: runs all features under the `Features` folder
 // @CucumberOptions(
-//         features = "Resources",
-//         glue = "FinalActivity.tests.stepDefinitions", monochrome = true,
+//         features = "Features",
+//         glue = "FinalActivity.tests.StepDefinitions", monochrome = true,
 //         plugin = {"html:target/cucumber.html"
 //         }
 // )
-// The original runner is preserved above (commented).
-// Below is a runner configured to execute a single feature file
-// `alertsAndWindows.feature`. To change which feature runs, edit
+// The original Runner is preserved above (commented).
+// Below is a Runner configured to execute a single feature file
+// `AlertsAndWindows.feature`. To change which feature runs, edit
 // the `singleFeaturePath` value or restore the original annotation.
 @CucumberOptions(
-        features = "src/test/java/Resources/alertsAndWindows.feature",
-        glue = "FinalActivity.tests.stepDefinitions",
+        features = "src/test/java/Features/AlertsAndWindows.feature",
+        glue = "FinalActivity.tests.StepDefinitions",
         monochrome = true,
         plugin = {"html:target/cucumber.html"}
 )

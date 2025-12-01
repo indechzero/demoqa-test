@@ -1,9 +1,8 @@
-package FinalActivity.tests.stepDefinitions.Elements;
+package FinalActivity.tests.StepDefinitions.Elements;
 
 import TestComponents.BaseTest;
 import FinalActivity.tests.PageActions.ButtonActComponent;
 import io.cucumber.java.en.*;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
