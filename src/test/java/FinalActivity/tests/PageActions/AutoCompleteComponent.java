@@ -6,8 +6,11 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.testng.AllureTestNg;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -16,27 +19,30 @@ import java.util.Arrays;
 public class AutoCompleteComponent extends BaseTest {
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
-
+    private static final Logger log = LoggerFactory.getLogger(AlertsComponent.class);
     AutoCompletePageObjects autoCompleteObjects = new AutoCompletePageObjects(driver);
 
 @Test
 @Description("Verify if home page is accessible")
     public void goToHomePage()
     {
+        log.info("Navigate to DemoQA site");
         Allure.step("Navigate to home page");
         driver.get("https://demoqa.com/");
+        log.info("Assert URL");
+        assert driver.getCurrentUrl().equalsIgnoreCase("https://demoqa.com/");
+        log.error("Unable to assert URL");
         javaScrollDown(autoCompleteObjects.widgets);
         autoCompleteObjects.widgets.click();
         javaScrollDown(autoCompleteObjects.autoComplete);
         autoCompleteObjects.autoComplete.click();
+        log.info("Navigate to Autocomplete activity page");
         Allure.step("Navigate to autocomplete activity page");
 
     }
     @Test
     @Description("Verify if auto complete activity page is correct")
     public void goToForm(){
-
-//        js.executeScript("window.scrollBy(0,150)", "");
 
         String PageTitle = "DEMOQA";
         assertTitle(PageTitle);
@@ -51,6 +57,7 @@ public class AutoCompleteComponent extends BaseTest {
     public void multipleColorNames () throws InterruptedException {
         js.executeScript("window.scrollBy(0,350)", "");
             Allure.step("Verify that I can type on the text field and suggestions will display.");
+            log.info("Verify that I can type on the text field and suggestions will display.");
         assert autoCompleteObjects.typeMultipleColorNames.getText().equals("Type multiple color names");
         autoCompleteObjects.typeMultipleColorNamesInput.sendKeys("R");
             saveScreenshot();

@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ButtonStepDefinition extends BaseTest {
 
 
-       ButtonActComponent btnComponent = new ButtonActComponent();
+       final ButtonActComponent btnComponent = new ButtonActComponent();
     @Test
     @Given("that I am in the DEMO homepage for Buttons activity")
        public void gotHomePage() throws InterruptedException, IOException {

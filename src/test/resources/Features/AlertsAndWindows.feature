@@ -9,7 +9,7 @@ Scenario: Verify that the Alerts activity is functional
   And I click the third alert button to verify that it is functional
   Then the last alert button must be functional
 
-#  Scenario: Verify that the Windows activity is functional
-#    Given that I am in the DEMO homepage for the Windows Activity
-#    When I navigated to the Windows activity page
-#    Then I must be able to verify that the windows are functional
+  Scenario: Verify that the Windows activity is functional
+    Given that I am in the DEMO homepage for the Windows Activity
+    When I navigated to the Windows activity page
+    Then I must be able to verify that the windows are functional

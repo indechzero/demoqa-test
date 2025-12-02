@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="tests">
 
-<!--    <listeners>-->
-<!--        <listener class-name="TestComponents.Listeners"/>-->
-<!--    </listeners>-->
+    <listeners>
+        <listener class-name="TestComponents.Listeners"/>
+    </listeners>
     <test name = "Test Demo">
         <classes>
             <class name = "FinalActivity.tests.Runner.TestRunner"/>
@@ -48,7 +48,7 @@
 <!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.AutoSuggestStepDef"/>-->
 <!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.DatePickerStepDef"/>-->
 <!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.ProgressBarStepDef"/>-->
-<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.selectMenuStepDef"/>-->
+<!--            <class name="FinalActivity.tests.StepDefinitions.WidgetsAct.SelectMenuStepDef"/>-->
 
 
 <!--        </classes>-->

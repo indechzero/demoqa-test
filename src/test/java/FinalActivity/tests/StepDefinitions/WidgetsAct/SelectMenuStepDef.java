@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class selectMenuStepDef extends BaseTest {
+public class SelectMenuStepDef extends BaseTest {
 
         SelectMenuComponent selectComponent = new SelectMenuComponent();
 

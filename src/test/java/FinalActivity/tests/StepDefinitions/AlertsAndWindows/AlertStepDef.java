@@ -38,12 +38,12 @@ AlertsComponent alertComponent = new AlertsComponent();
 
     @And("I click the third alert button to verify that it is functional")
     public void goToThirdAlerts() throws InterruptedException, IOException {
-        alertComponent.ThirdAlertButton();
+        alertComponent.thirdAlertButton();
     }
 
     @Then("the last alert button must be functional")
     public void goToFourthAlerts() throws InterruptedException, IOException {
-        alertComponent.FourthAlertButton();
+        alertComponent.fourthAlertButton();
     }
 
         }

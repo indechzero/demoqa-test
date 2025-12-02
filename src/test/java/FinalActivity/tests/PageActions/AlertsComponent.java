@@ -2,6 +2,7 @@ package FinalActivity.tests.PageActions;
 
 import FinalActivity.tests.PageObjects.AlertsPageObjects;
 import TestComponents.BaseTest;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.slf4j.Logger;
@@ -29,6 +30,8 @@ public class AlertsComponent extends BaseTest {
 
     public  void goToAlertsPage(){
         log.info("Navigate to Alerts page");
+        Allure.step("Navigate to Alerts page");
+
         String ActualTitle = driver.getTitle();
         String PageTitle = "DEMOQA";
         assert ActualTitle.equalsIgnoreCase(PageTitle);
@@ -38,12 +41,15 @@ public class AlertsComponent extends BaseTest {
    }
 
     public void firstAlert(){
+        log.info("Verify first Alert");
+        Allure.step("Verify first Alert");
+
         alertsObjects.alertButton.click();
         alertVerification();
         Alert alert = driver.switchTo().alert();
         //Store the alert text in a variable and verify it
         String text = alert.getText();
-
+        log.info("Assert first Alert");
        assert text.equalsIgnoreCase("You clicked a button");
         alert.dismiss();
         System.out.println(text);
@@ -53,6 +59,8 @@ public class AlertsComponent extends BaseTest {
     public void secondAlertButton (){
 
         js.executeScript("window.scrollBy(0,450)", "");
+        log.info("Verify Second Alert");
+        Allure.step("Verify Second Alert");
 
         alertsObjects.TimerAlertButton.click();
         alertVerification();
@@ -63,7 +71,10 @@ public class AlertsComponent extends BaseTest {
         alert.accept();
     }
 
-    public void ThirdAlertButton (){
+    public void thirdAlertButton(){
+
+        log.info("Verify Third Alert");
+        Allure.step("Verify Third Alert");
 
         alertsObjects.confBtn.click();
         alertVerification();
@@ -75,11 +86,15 @@ public class AlertsComponent extends BaseTest {
      assert alertsObjects.okayResult.getText().equalsIgnoreCase("You selected Ok");
 
     }
-    public void FourthAlertButton (){
-
+    public void fourthAlertButton(){
+        log.info("Verify Fourth Alert");
+        Allure.step("Verify Fourth Alert");
         alertsObjects.promptButton.click();
         alertVerification();
         Alert alert = driver.switchTo().alert();
+
+        log.info("Assert message input");
+        Allure.step("Assert message input");
 
         String message = "Jane Doe";
         alert.sendKeys(message);

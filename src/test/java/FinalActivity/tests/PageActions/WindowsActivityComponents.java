@@ -11,9 +11,9 @@ import java.util.Set;
 
 import static org.testng.Assert.assertEquals;
 
-public class windowsActivityComponents extends BaseTest {
+public class WindowsActivityComponents extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(windowsActivityComponents.class);
+    private static final Logger log = LoggerFactory.getLogger(WindowsActivityComponents.class);
     private static final WindowsActPageObjects windowPageObjects = new WindowsActPageObjects(driver);
 
     public static void goToHomePage()
@@ -32,11 +32,12 @@ public class windowsActivityComponents extends BaseTest {
     {
         driver.manage().window().maximize();
 
+        log.info("Verify Page Title");
         String PageTitle = driver.getTitle();
         String ActualPageTitle = "DEMOQA";
         System.out.println(windowPageObjects.sectionTitle.getText());
         assertEquals(PageTitle,ActualPageTitle, "Page title does not match the expected value");
-
+        log.error("Unable to assert page title");
         String expectedSectionTitle = "Browser Windows";
         String actualSectionTitle = windowPageObjects.sectionTitle.getText();
 
@@ -48,11 +49,10 @@ public class windowsActivityComponents extends BaseTest {
 
     public static void windowHandle() throws InterruptedException {
 
+        log.info("Verify switching between windows and tabs");
+
         String parentWindow = driver.getWindowHandle();
-
-//        List<WebElement> browserWindowButtons = driver.findElements(By.xpath("//div[@id='browserWindows']//div//button"));
         List<WebElement> browserWindowButtons = windowPageObjects.browserWindowsBtnList;
-
 
         for (WebElement element : browserWindowButtons) {
             windowScrollToElement(driver, element);
@@ -78,32 +78,26 @@ public class windowsActivityComponents extends BaseTest {
                         driver.switchTo().window(handle);
                         System.out.println("Switched to window: " + handle);
                         Thread.sleep(2000);
-//                    System.out.println("New Window Title: " + title);
                         System.out.println(title);
-//                        waitForBodyTextToAppear(windowPageObjects.bodyText);
-//                        System.out.println(windowPageObjects.bodyText.getText());
                         System.out.println("Window/Tab closed");
-
 
                     } catch (Exception e) {
                         System.out.println("Error Occurred: " + e.getMessage());
-//                        driver.switchTo().window(handle);
                         System.out.println("Switched to window: " + handle);
                         Thread.sleep(2000);
-
-//                        System.out.println(driver.findElement(By.xpath("/html/body")).getText());
 
                     }
                 }
             }
         }
-
-//        driver.switchTo().window(parentWindow);
         Thread.sleep(2000);
         driver.quit();
     }
 
     public static void windowScrollToElement(WebDriver driver, WebElement element) {
+
+        log.info("Scroll to element");
+
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);

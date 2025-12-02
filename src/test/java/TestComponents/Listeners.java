@@ -4,6 +4,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,6 +17,8 @@ public class Listeners extends BaseTest implements ITestListener{
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); //Thread safe
+	ChromeOptions options = new ChromeOptions();
+
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -39,7 +43,6 @@ public class Listeners extends BaseTest implements ITestListener{
 
 		String filePath = null;
 		try {
-
 			filePath = getScreenshot(result.getMethod().getMethodName(),driver);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -47,15 +50,12 @@ public class Listeners extends BaseTest implements ITestListener{
 		}
 		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
 
-
-
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		extentTest.get().fail(result.getThrowable());//
-
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
 					.get(result.getInstance());
@@ -67,7 +67,6 @@ public class Listeners extends BaseTest implements ITestListener{
 
 		String filePath = null;
 		try {
-
 			filePath = getScreenshot(result.getMethod().getMethodName(),driver);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

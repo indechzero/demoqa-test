@@ -3,7 +3,7 @@ import io.cucumber.testng.*;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
-@Test
+//@Test
 // ORIGINAL: runs all features under the `Features` folder
 // @CucumberOptions(
 //         features = "Features",
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 // `AlertsAndWindows.feature`. To change which feature runs, edit
 // the `singleFeaturePath` value or restore the original annotation.
 @CucumberOptions(
-        features = "src/test/java/Features/AlertsAndWindows.feature",
+        features = "src/test/resources/Features/",
         glue = "FinalActivity.tests.StepDefinitions",
         monochrome = true,
         plugin = {"html:target/cucumber.html"}
