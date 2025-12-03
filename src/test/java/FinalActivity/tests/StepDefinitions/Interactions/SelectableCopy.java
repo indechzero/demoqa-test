@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 
 public class SelectableCopy extends BaseTest {
   private WebDriver driver;

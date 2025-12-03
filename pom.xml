@@ -7,6 +7,7 @@
     <groupId>org.SeleniumFinalActivity</groupId>
     <artifactId>FinalActivity</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -70,11 +71,11 @@
             <version>7.27.0</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>net.masterthought</groupId>-->
-<!--            <artifactId>cucumber-reporting</artifactId>-->
-<!--            <version>5.10.1</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.10.1</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
@@ -126,21 +127,28 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <testNGArtifactName>org.testng:testng</testNGArtifactName>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-testng</artifactId>
+                        <version>3.2.5</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
+
     <properties>
         <!-- Original Java target settings commented for compatibility changes -->
-        <!-- <maven.compiler.source>23</maven.compiler.source> -->
-        <!-- <maven.compiler.target>23</maven.compiler.target> -->
+         <maven.compiler.source>23</maven.compiler.source>
+         <maven.compiler.target>23</maven.compiler.target>
         <!-- Using Java 17 for local execution compatibility -->
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+<!--        <maven.compiler.source>17</maven.compiler.source>-->
+<!--        <maven.compiler.target>17</maven.compiler.target>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

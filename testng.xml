@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests">
+<suite name="All Test Suite">
 
+    <!-- 2025-12-02: Commented out listener due to NoSuchFieldException: driver
+         The Listeners class tries to access a public 'driver' field which doesn't exist.
+         Tests run fine without it; this is only for ExtentReports screenshots.
+         TODO: Fix Listeners.java to properly get driver using getters instead of reflection -->
+    <!--
     <listeners>
         <listener class-name="TestComponents.Listeners"/>
     </listeners>
+    -->
     <test name = "Test Demo">
         <classes>
             <class name = "FinalActivity.tests.Runner.TestRunner"/>
