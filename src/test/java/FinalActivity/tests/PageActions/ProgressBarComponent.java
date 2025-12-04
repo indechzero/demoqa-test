@@ -72,7 +72,7 @@ public class ProgressBarComponent extends BaseTest {
     public void resetProgressBar () {
 
         progressPageObjects.resetButton.click();
-        waitForProgressBarFinished(progressPageObjects.progressBarPercentageBy);
+        assert progressPageObjects.progressBar.getText().equalsIgnoreCase("100%");
         System.out.println(progressPageObjects.progressBar.getText());
 
 

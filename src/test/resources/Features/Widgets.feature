@@ -1,14 +1,12 @@
 @tag
 Feature: Widgets Activity
 
-  @tag1
   Scenario: Verify that the Auto Suggestion activity is functional
     Given I am in the DEMO homepage for Auto Suggestion activity
     When I navigated to the Auto Suggestion activity page
     And verify that I can enter multiple color
     Then I must be able to enter single color only
 
-    @tag2
   Scenario: Verify that the Date Picker activity is functional
     Given I am in the DEMO homepage for Date Picker activity
     When I navigated to the Date Picker activity page

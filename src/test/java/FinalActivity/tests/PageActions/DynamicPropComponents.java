@@ -11,14 +11,16 @@ public class DynamicPropComponents extends BaseTest {
 
     DynamicPropPageObjects dynamicPgObjects = new DynamicPropPageObjects(driver);
 
+
     @Given("that I am in the DEMOQA homepage")
-    public void goToDemoHomePage()
-    {
+    public void goToDemoHomePage() throws InterruptedException {
         driver.get("https://demoqa.com/");
         assert driver.getCurrentUrl().equalsIgnoreCase("https://demoqa.com/");
 
         dynamicPgObjects.elementsNavButton.click();
-        dynamicPgObjects.dynamicProperties.click();
+        Thread.sleep(5000);
+        javaScriptClick(dynamicPgObjects.dynamicProperties);
+//        dynamicPgObjects.dynamicProperties.click();
     }
 
 

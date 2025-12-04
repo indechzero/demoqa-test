@@ -81,7 +81,7 @@ public void goToWebTablePage() {
 
     }
 
-    public void editNewRowEntry () {
+    public void editNewRowEntry () throws InterruptedException {
 
         String ghostText = driver.findElement(webTableObjects.tblSearchBox).getAttribute("placeholder");
         System.out.println(ghostText);
@@ -120,6 +120,8 @@ public void goToWebTablePage() {
                 webTableObjects.editDepartmentField.sendKeys("Edit Job");
 
         webTableObjects.editModalSubmitBtn.click();
+
+        Thread.sleep(8000);
 
       assert webTableObjects.editFirstNameField.getText().equals("JohnEdit");
 

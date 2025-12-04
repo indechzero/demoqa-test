@@ -144,7 +144,7 @@
 
     <properties>
         <!-- Original Java target settings commented for compatibility changes -->
-         <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.source>23</maven.compiler.source>
          <maven.compiler.target>23</maven.compiler.target>
         <!-- Using Java 17 for local execution compatibility -->
 <!--        <maven.compiler.source>17</maven.compiler.source>-->

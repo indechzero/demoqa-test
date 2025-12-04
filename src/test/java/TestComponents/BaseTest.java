@@ -32,6 +32,7 @@ public class BaseTest {
 		ChromeOptions options = new ChromeOptions();
 		// Run headless by default when executing in CI or this environment.
 		options.addArguments("--headless=new");
+		options.addArguments("--window-size=1920,1080");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(options);
@@ -208,8 +209,9 @@ public class BaseTest {
 		jse.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
-
-
+	public void javaScrollToElement(By element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
 
 
 }

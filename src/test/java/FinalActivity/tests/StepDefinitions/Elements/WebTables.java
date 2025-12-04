@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -38,7 +39,7 @@ public class WebTables extends BaseTest {
 
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown()  {
         driver.close();
     }

@@ -11,7 +11,6 @@ public class PracticeFormComponents extends BaseTest {
 
     practiceFormPageObjects practicePgObjects = new practiceFormPageObjects(driver);
 
-
     JavascriptExecutor js = (JavascriptExecutor) driver;
 
 

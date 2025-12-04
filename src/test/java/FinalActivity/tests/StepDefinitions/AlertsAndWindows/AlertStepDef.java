@@ -4,14 +4,17 @@ import FinalActivity.tests.PageActions.AlertsComponent;
 import TestComponents.BaseTest;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+import static TestComponents.BaseTest.driver;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class AlertStepDef extends BaseTest {
-    WebDriver driver;
+
+
 
 AlertsComponent alertComponent = new AlertsComponent();
 
@@ -46,11 +49,9 @@ AlertsComponent alertComponent = new AlertsComponent();
         alertComponent.fourthAlertButton();
     }
 
-        }
+    @AfterClass
+    public void tearDown()  {
+        driver.quit();
+    }
 
-//    @AfterClass
-//    public void tearDown()  {
-//        driver.quit();
-//    }
-//    }
-
+}

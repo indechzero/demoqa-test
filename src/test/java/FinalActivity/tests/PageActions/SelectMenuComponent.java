@@ -2,14 +2,20 @@ package FinalActivity.tests.PageActions;
 
 import FinalActivity.tests.PageObjects.selectMenuPageObjects;
 import TestComponents.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 
 public class SelectMenuComponent extends BaseTest {
 
     private final selectMenuPageObjects selectPageObj = new selectMenuPageObjects(driver);
+    private WebDriverWait wait;
 
     public void goToHomePage()
     {
@@ -47,30 +53,34 @@ public class SelectMenuComponent extends BaseTest {
 
     public void clickOneValue(){
 
-//        selectPageObj.selectValueFirstGroupOptions.getFirst().click();
+        selectPageObj.selectValueFirstGroupOptions.getFirst().click();
         System.out.println("Selected Option:" + " " + selectPageObj.selectValueField.getText());
         assert selectPageObj.selectValueField.getText().equalsIgnoreCase("Group 1, option 1");
 
 }
 
-    public void clickSelectOneField (){
+    public void clickSelectOneField () throws InterruptedException {
 
+        javaScrollDown(selectPageObj.selectOneLabel);
         System.out.println(selectPageObj.selectOneLabel.getText());
         assert selectPageObj.selectOneLabel.getText().equalsIgnoreCase("Select One");
+        javaScriptClick(selectPageObj.selectOneDropdown);
         selectPageObj.selectOneField.click();
-
+        Thread.sleep(5000);
         for (int i = 1; i < selectPageObj.selectOneOptions.size(); i++) {
             System.out.println(selectPageObj.selectOneOptions.get(i-1).getText());
             waitForWebElementListToAppear(selectPageObj.selectOneOptions);
         }
+        Thread.sleep(5000);
         selectPageObj.selectOneOptions.get(1).click();
-        System.out.println(selectPageObj.selectOneField.getText());
-        assert selectPageObj.selectOneField.getText().equalsIgnoreCase("Mr.");
+        System.out.println(selectPageObj.selectOneDropdown.getText());
+        assert selectPageObj.selectOneDropdown.getText().equalsIgnoreCase("Mr.");
 
     }
 
-    public void clickOldStyleField (){
 
+    public void clickOldStyleField (){
+        javaScrollDown(selectPageObj.oldStyleSelectMenuLabel);
         System.out.println(selectPageObj.oldStyleSelectMenuLabel.getText());
         assert selectPageObj.oldStyleSelectMenuLabel.getText().equalsIgnoreCase("Old Style Select Menu");
         selectPageObj.oldStyleSelectMenuField.click();
@@ -83,6 +93,7 @@ public class SelectMenuComponent extends BaseTest {
 
     }
     public void clickMultiSelectField (){
+        javaScrollDown(selectPageObj.multiSelectLabel);
 
         System.out.println(selectPageObj.multiSelectLabel.getText());
         assert selectPageObj.multiSelectLabel.getText().equalsIgnoreCase("Multiselect drop down");
@@ -114,6 +125,7 @@ public class SelectMenuComponent extends BaseTest {
             assert standardMultiSelect.getFirstSelectedOption().getText().equals("Volvo");
 
     }
+
 
 }
 

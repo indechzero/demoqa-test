@@ -1,6 +1,7 @@
 package FinalActivity.tests.PageObjects;
 
 import TestComponents.BaseTest;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -28,12 +29,20 @@ public class selectMenuPageObjects extends BaseTest {
     @FindBy(xpath="//*[@id=\"withOptGroup\"]/div[2]/div/div[1]/div[2]/div")
     @CacheLookup public List<WebElement> selectValueFirstGroupOptions;
 
-
     @FindBy(xpath="//*[@id=\"selectMenuContainer\"]/div[3]/div")
     @CacheLookup public WebElement selectOneLabel;
 
     @FindBy(xpath="//*[@id=\"selectOne\"]/div/div[1]")
     @CacheLookup public WebElement selectOneField;
+
+    @FindBy(id = "selectOne")
+    public WebElement selectOneDropdown;
+
+//    // 2. Select One (Custom React Dropdown)
+//    public By selectOneDropdown = By.id("selectOne");
+//    public By selectOneOption(String text) {
+//        return By.xpath("//div[contains(@id, 'react-select-3-option') and text()='" + text + "']");
+//    }
 
     @FindBy(xpath = "//*[@id=\"selectOne\"]/div[2]/div/div/div//*")
     @CacheLookup public  List <WebElement> selectOneOptions;

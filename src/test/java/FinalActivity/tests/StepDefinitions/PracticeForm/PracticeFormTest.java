@@ -4,8 +4,8 @@ import FinalActivity.tests.PageActions.PracticeFormComponents;
 //import org.FinalActivity.PracticeFormComponents;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.junit.Test;
-import org.junit.Before;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterClass;
@@ -17,8 +17,6 @@ public class PracticeFormTest extends BaseTest {
   @Before
   public void setUp() {
 
-
-    driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
 
   }
@@ -73,6 +71,7 @@ public class PracticeFormTest extends BaseTest {
   {
       practiceAct.submitModal();
 }
+
 //
 //    {
 //      // Scroll Action for small resolutions
